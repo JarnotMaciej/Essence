@@ -33,6 +33,36 @@
     ); /*  Only on small layout  */ /*  Default: calc(var(--TabsHeight) + var(--TabsBorder))  */ /*  Default as a number: 44  */
 }
 
+/* Dark/light mode icons */
+@media (prefers-color-scheme: light) {
+    :root {
+        --IconAdblock: url(window/adblock.svg);
+        --IconDashlane: url(window/dashlane.svg);
+        --IconMenuButton: url(window/side_navigation.svg);
+        --IconPermissionGranted: url(window/switch.svg);
+        --IconForward: url(window/right.svg);
+        --IconBack: url(window/left.svg);
+        --IconReload: url(window/refresh.svg);
+        --IconStop: url(window/stop.svg);
+        --IconTabClose: url(window/minus.svg);
+        --IconNewTab: url(window/add.svg);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --IconAdblock: url(window/adblock_light.svg);
+        --IconDashlane: url(window/dashlane_light.svg);
+        --IconMenuButton: url(window/side_navigation_light.svg);
+        --IconPermissionGranted: url(window/switch_light.svg);
+        --IconForward: url(window/right_light.svg);
+        --IconBack: url(window/left_light.svg);
+        --IconReload: url(window/refresh_light.svg);
+        --IconStop: url(window/stop_light.svg);
+        --IconTabClose: url(window/minus_light.svg);
+        --IconNewTab: url(window/add_light.svg);
+    }
+}
+
 @media screen and (min-width: 1325px) /* Only the tabs space will grow from here */ {
     :root #nav-bar {
         margin-top: calc(
@@ -648,41 +678,41 @@ findbar {
 
 /* custom buttons */
 #ublock0_raymondhill_net-BAP {
-    list-style-image: url(window/adblock.svg) !important;
+    list-style-image: var(--IconAdblock) !important;
 }
 
 #jetpack-extension_dashlane_com-BAP {
-    list-style-image: url(window/dashlane.svg) !important;
+    list-style-image: var(--IconDashlane) !important;
 }
 
 #PanelUI-menu-button {
-    list-style-image: url(window/side_navigation.svg) !important;
+    list-style-image: var(--IconMenuButton) !important;
 }
 
 #permissions-granted-icon {
-    list-style-image: url(window/switch.svg) !important;
+    list-style-image: var(--IconPermissionGranted) !important;
 }
 
 #forward-button {
-    list-style-image: url(window/right.svg) !important;
+    list-style-image: var(--IconForward) !important;
 }
 
 #back-button {
-    list-style-image: url(window/left.svg) !important;
+    list-style-image: var(--IconBack) !important;
 }
 
 #reload-button {
-    list-style-image: url(window/refresh.svg) !important;
+    list-style-image: var(--IconReload) !important;
 }
 
 #stop-button {
-    list-style-image: url(window/stop.svg) !important;
+    list-style-image: var(--IconStop) !important;
 }
 
 .tab-close-button {
-    list-style-image: url(window/minus.svg) !important;
+    list-style-image: var(--IconTabClose) !important;
 }
 
 #tabs-newtab-button > .toolbarbutton-icon {
-    list-style-image: url(window/add.svg) !important;    
+    list-style-image: var(--IconNewTab) !important;    
 }
